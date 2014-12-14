@@ -1,4 +1,15 @@
-﻿.wase-feature {
+﻿.wase-logo {
+    color: #fff;
+    font-family: 'gooddogregular';
+    font-size: 2.7em;
+}
+
+.wase-slogan {
+    color: #000;
+    font-size: .7em;
+}
+
+.wase-feature {
     background-color: #ddcc00;
 }
 
@@ -17,3 +28,12 @@
 .wase-info {
     color: #fff;
 }
+
+.wase-footer {
+    color: #fff;
+    background-color: #000;
+}
+
+    .wase-footer a {
+        color: #fff;
+    }
