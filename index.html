@@ -1,6 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/wase.css" />
 </head>
+
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -27,125 +29,59 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="wase-logo">
-                    <img src="assets/img/wase_logo_32x32.png" alt="WASE STACK" />
-                    WASE <small class="wase-slogan">full development stack</small>
+                    <img src="assets/img/wase_logo_32x32.png" alt="WASE STACK" />WASE <small class="wase-slogan">full development stack</small>
                 </div>
             </div>
             <div id="navbar" class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#/">Home</a></li>
-                    <li><a href="#/docs">Getting Start</a></li>
-                    <li><a href="https://github.com/andrebaltieri/wase" target="_blank">Contribute</a></li>
-                    <li><a href="#/contact">Contact</a></li>
+                    <li class="wase-menu-item active"><a href="#/">Home</a>
+                    </li>
+                    <li class="wase-menu-item"><a href="#/docs">Getting Start</a>
+                    </li>
+                    <li><a href="https://github.com/andrebaltieri/wase" target="_blank">Contribute</a>
+                    </li>
+                    <li class="wase-menu-item"><a href="#/contact">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <div class="col-md-12 wase-feature">
-        <br /><br />
-        <br /><br />
-        <div class="container">
-            <div class="col-md-6">
-                <br />
-                <h1><small>THE MODERN</small><br />WEB APP STACK<br /><small>FOR MULTIPLE PLATFORMS</small></h1>
-                <p>WebAPI, AngularJS, SQL Server and Entity Framework on multiple platforms</p>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="assets/img/wase_logo_300x300.png" alt="WASE STACK" />
-            </div>
-        </div>
-        <br /><br />
-        <div class="clearfix"></div>
-    </div>
-    <div class="clearfix"></div>
-    <br /><br /><br />
-    <div class="col-md-12">
-        <div class="container">
-            <div class="jumbotron">
-                <h2>On Mac OS</h2>
-                Install Brew
-                <pre>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</pre>
-
-                Tap ASP.NET
-                <pre>brew tap aspnet/k</pre>
-
-                Install KVM
-                <pre>brew install kvm</pre>
-
-                If KVM is not avaliable on you terminal
-                <pre>source kvm.sh</pre>
-            </div>
-
-            <div class="jumbotron">
-                <h2>On Windows</h2>
-                Download and Install <strong>Visual Studio 2013 Community</strong><br />
-                <a href="http://www.visualstudio.com/en-us/products/visual-studio-community-vs" target="_blank">http://www.visualstudio.com/en-us/products/visual-studio-community-vs</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12 navbar-inverse wase-info">
-        <div class="container">
-            <div class="col-md-6">
-                <h3>What is WASE?</h3>
-                <p>
-                    WASE is a complete modern web development stack that runs on
-                    Windows and Mac, helping you to achieve your development goals
-                    faster and organized.
-                </p>
-
-                <p>
-                    WASE is the acronym for <strong>WebAPI</strong>, <strong>AngularJS</strong>,
-                    <strong>SQL Server</strong> and <strong>Entity Framework</strong>, a very known
-                    stack for Microsoft developers, and now, for open source community.
-                </p>
-
-                <p>
-                    With WASE, you can easily create smart, robust and lightweight applications
-                    persisting your data <strong>In Memory</strong>, in a <strong>SQL Server</strong> or
-                    other database you prefer.
-                </p>
-
-                <h3>Tools for Non-Windows Developers</h3>
-                <p>
-                    If you're running WASE STACK on <strong>Windows</strong>, we highly recommend you to
-                    <strong><a href="http://www.visualstudio.com/en-us/products/visual-studio-community-vs" target="_blank">download and install visual studio 2013 community</a></strong>.
-                </p>
-                <p>
-                    If you're running WASE STACK on <strong>Mac OS</strong>, we recommend you to
-                    <strong><a href="#/docs/mac/start">read the Mac OS Getting Start Guide</a></strong>
-                    to obtain more information about our recommended tools.
-                    <br /><br />
-
-                </p>
-            </div>
-            <div class="col-md-6 text-center">
-                <br />
-                <br />
-                <div class="wase-logo">
-                    <img src="assets/img/wase_logo_300x300.png" alt="WASE STACK" />
-                    <br />
-                    WASE DEV STACK
-                </div>
-            </div>
-        </div>
-    </div>
+    <br />
+    <br />
+    <div ng-view></div>
 
     <div class="col-md-12 text-center wase-footer">
-        <br /><br />
+        <br />
+        <br />
         <em>-- want to keep in touch? --</em>
-        <br /><br />
+        <br />
+        <br />
         <div class="container">
             <div class="col-md-4 text-center"></div>
-            <div class="col-md-1 text-center"><a href="" target="_blank"><i class="fa fa-facebook fa-3x"></i></a></div>
-            <div class="col-md-1 text-center"><a href="" target="_blank"><i class="fa fa-twitter fa-3x"></i></a></div>
-            <div class="col-md-1 text-center"><a href="" target="_blank"><i class="fa fa-github fa-3x"></i></a></div>
-            <div class="col-md-1 text-center"><a href="" target="_blank"><i class="fa fa-envelope fa-3x"></i></a></div>
+            <div class="col-md-1 text-center"><a href="" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>
+            </div>
+            <div class="col-md-1 text-center"><a href="" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
+            </div>
+            <div class="col-md-1 text-center"><a href="" target="_blank"><i class="fa fa-github fa-3x"></i></a>
+            </div>
+            <div class="col-md-1 text-center"><a href="" target="_blank"><i class="fa fa-envelope fa-3x"></i></a>
+            </div>
             <div class="col-md-4 text-center"></div>
             <div class="clearfix"></div>
         </div>
-        <br /><br />
+        <br />
+        <br />
     </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.27/angular-route.min.js"></script>
+    <script src="assets/js/wase.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/main/controllers/HomeCtrl.js"></script>
+    <script src="app/docs/controllers/DocsCtrl.js"></script>
+
 </body>
+
 </html>
