@@ -1,4 +1,4 @@
-wase
+WASE
 ====
 
-Discover wase development stack
+http://wase.azurewebsites.net/
